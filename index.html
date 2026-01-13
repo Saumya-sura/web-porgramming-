@@ -2,63 +2,88 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Simple Homepage</title>
+  <title>Dog Breeds - Home</title>
 </head>
-<body bgcolor="#e6f7ff">
+<body bgcolor="#f5e6d3">
 
-  <!-- Scrolling main heading -->
-  <marquee><h1>Welcome to My Simple Website</h1></marquee>
+  <!-- Header -->
+  <center>
+    <marquee behavior="scroll" direction="left"><font size="6" color="#b35900"><b>🐶 Welcome to the Dog Breeds Hub 🐾</b></font></marquee>
+    <font size="3">A simple, aesthetic site using only HTML (no CSS)</font>
+  </center>
 
-  <!-- Intro section -->
-  <div id="intro">
-    <h2>About This Site</h2>
-    <p>This page demonstrates basic HTML tags and formatting without CSS.</p>
-    <p>Text formatting examples: <b>bold</b>, <strong>strong</strong>, <i>italic</i>, <em>emphasis</em>, <u>underline</u>, <small>small</small>, <big>big</big>, <sup>sup</sup>, <sub>sub</sub>, <code>code</code>, <tt>teletype</tt>, <s>strikethrough</s>.</p>
-  </div>
+  <!-- Page layout table: nav | content | feature -->
+  <table width="95%" align="center" cellpadding="10" cellspacing="8" border="0">
+    <tr>
+      <!-- Navigation column -->
+      <td valign="top" width="20%" bgcolor="#e8d7c3">
+        <fieldset>
+          <legend><font color="#8b4513"><b>Navigation</b></font></legend>
+          <ul>
+            <li><font color="#8b0000" size="3"><a href="index.html" target="_blank">Home</a></font></li>
+            <li><font color="#8b4513" size="3"><a href="labrador.html" target="_blank">Labrador Retriever</a></font></li>
+            <li><font color="#006666" size="3"><a href="beagle.html" target="_blank">Beagle</a></font></li>
+            <li><font color="#006400" size="3"><a href="bulldog.html" target="_blank">Bulldog</a></font></li>
+            <li><font color="#0000cd" size="3"><a href="https://www.akc.org" target="_blank">AKC</a></font></li>
+          </ul>
+        </fieldset>
+      </td>
 
-  <!-- Various heading levels -->
-  <div id="headings">
-    <h3>Main Content</h3>
-    <h4>Subheading (H4)</h4>
-    <h5>Smaller Subheading (H5)</h5>
-    <h6>Smallest Heading (H6)</h6>
-  </div>
+      <!-- Main content column -->
+      <td valign="top" width="55%" bgcolor="#ffffff">
+        <fieldset>
+          <legend><font color="#b35900"><b>About Dog Breeds</b></font></legend>
+          <h2><font color="#a0522d">What you'll find here</font></h2>
+          <p>Welcome! This mini-site showcases a few popular dog breeds with images, facts, and links to dedicated pages.</p>
+          <p>Formatting examples inline: <b>Bold</b>, <i>Italic</i>, <u>Underline</u>, <em>Emphasis</em>, <small>Small</small>, <big>Big</big>, <code>code</code>.</p>
 
-  <!-- Links list: every item is a link and opens in a new tab; colors changed using font tag -->
-  <div id="links">
-    <h2>Quick Links</h2>
-    <ul>
-      <li><font color="red"><a href="https://www.example.com" target="_blank">Example (external)</a></font></li>
-      <li><font color="green"><a href="https://www.wikipedia.org" target="_blank">Wikipedia (external)</a></font></li>
-      <li><font color="blue"><a href="#gallery" target="_blank">Gallery (internal)</a></font></li>
-      <li><font color="#800080"><a href="#intro" target="_blank">Intro (internal)</a></font></li>
-    </ul>
-  </div>
+          <hr>
+          <h3><font color="#b35900">Image Gallery</font></h3>
+          <table cellpadding="6" cellspacing="4" border="0">
+            <tr>
+              <td bgcolor="#fff"><a href="labrador.html" target="_blank"><img src="https://placedog.net/260/160?id=1" alt="Dog 1" border="0"></a></td>
+              <td bgcolor="#fff"><a href="beagle.html" target="_blank"><img src="https://placedog.net/260/160?id=2" alt="Dog 2" border="0"></a></td>
+              <td bgcolor="#fff"><a href="bulldog.html" target="_blank"><img src="https://placedog.net/260/160?id=3" alt="Dog 3" border="0"></a></td>
+              <td bgcolor="#fff"><a href="index.html" target="_blank"><img src="https://placedog.net/260/160?id=4" alt="Dog 4" border="0"></a></td>
+            </tr>
+            <tr>
+              <td align="center"><font size="2"><a href="labrador.html" target="_blank"><font color="brown">Labrador</font></a></font></td>
+              <td align="center"><font size="2"><a href="beagle.html" target="_blank"><font color="teal">Beagle</font></a></font></td>
+              <td align="center"><font size="2"><a href="bulldog.html" target="_blank"><font color="darkgreen">Bulldog</font></a></font></td>
+              <td align="center"><font size="2">Mixed</font></td>
+            </tr>
+          </table>
+        </fieldset>
+      </td>
 
-  <!-- Image gallery arranged horizontally using a table -->
-  <div id="gallery">
-    <h2>Image Gallery</h2>
-    <table cellpadding="5" cellspacing="0">
-      <tr>
-        <td><img src="https://via.placeholder.com/180" alt="Image 1"></td>
-        <td><img src="https://via.placeholder.com/180/ff7f7f/000000" alt="Image 2"></td>
-        <td><img src="https://via.placeholder.com/180/7fff7f/000000" alt="Image 3"></td>
-        <td><img src="https://via.placeholder.com/180/7f7fff/ffffff" alt="Image 4"></td>
-      </tr>
-    </table>
-  </div>
+      <!-- Feature column (dog tips and facts) -->
+      <td valign="top" width="25%" bgcolor="#e8f5f0">
+        <fieldset>
+          <legend><font color="#2e8b57"><b>Dog Care Tips</b></font></legend>
+          <h4><font color="#2e8b57">Essential Tips</font></h4>
+          <ul>
+            <li><small><b>Exercise:</b> Daily walks keep dogs healthy.</small></li>
+            <li><small><b>Training:</b> Positive methods work best.</small></li>
+            <li><small><b>Health:</b> Annual vet checkups.</small></li>
+            <li><small><b>Diet:</b> Quality food matters.</small></li>
+            <li><small><b>Love:</b> Spend time with your dog.</small></li>
+          </ul>
+          <hr>
+          <h4><font color="#2e8b57">Fun Facts</font></h4>
+          <ul>
+            <li><small>Dogs hear 4x better than humans.</small></li>
+            <li><small>Each dog has a unique nose print.</small></li>
+            <li><small>Dogs can learn 250+ words.</small></li>
+          </ul>
+        </fieldset>
+      </td>
+    </tr>
+  </table>
 
-  <!-- Embedded page using iframe -->
-  <div id="embed">
-    <h2>Embedded Webpage</h2>
-    <iframe src="https://www.example.com" width="700" height="350" title="Embedded Example"></iframe>
-  </div>
-
-  <!-- Another paragraph demonstrating more formatting -->
-  <div id="more">
-    <h3>More Content</h3>
-    <p>Here is a short paragraph that uses <b>bold</b>, <i>italic</i> and <u>underlined</u> words together. You can also see <small>small text</small> and <big>big text</big> in-line.</p>
-  </div>
+  <!-- Footer -->
+  <center>
+    <hr width="80%">
+  </center>
 
 </body>
 </html>
