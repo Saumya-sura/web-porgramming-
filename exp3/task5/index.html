@@ -1,178 +1,128 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-    <meta charset="UTF-8">
+<!DOCTYPE html>
+<html>
+<head>
     <title>Student Registration Form</title>
-    <style>
-        body {
-        background: #fff;
-        font-family: Arial, sans-serif;
-        }
-        .container {
-        background: #f7cac9;
-        border: 2px solid #000;
-        width: 500px;
-        margin: 30px auto;
-        padding: 20px 40px 30px 40px;
-        box-sizing: border-box;
-        }
-        h1 {
-        text-align: center;
-        font-size: 2.5em;
-        margin-bottom: 20px;
-        font-family: Times New Roman, serif;
-        font-weight: bold;
-        text-decoration: none;
-        }
-        label {
-        display: inline-block;
-        width: 150px;
-        font-size: 1.1em;
-        margin-bottom: 8px;
-        vertical-align: top;
-        }
-        input[type="text"], input[type="email"], input[type="password"], select {
-        width: 250px;
-        padding: 4px 6px;
-        margin-bottom: 10px;
-        font-size: 1em;
-        border: 1px solid #aaa;
-        border-radius: 2px;
-        }
-        input[type="file"] {
-        margin-bottom: 10px;
-        }
-        .row {
-        margin-bottom: 8px;
-        }
-        .inline {
-        display: inline-block;
-        width: auto;
-        margin-right: 5px;
-        }
-        .dob-input {
-        width: 60px;
-        margin-right: 4px;
-        }
-        .mobile-prefix {
-        width: 40px;
-        margin-right: 4px;
-        }
-        .mobile-main {
-        width: 180px;
-        }
-        .dept-checkbox {
-        margin-right: 10px;
-        }
-        textarea {
-        width: 250px;
-        height: 50px;
-        font-size: 1em;
-        border: 1px solid #aaa;
-        border-radius: 2px;
-        resize: none;
-        }
-        .center-btn {
-        text-align: center;
-        margin-top: 15px;
-        }
-        input[type="submit"] {
-        padding: 6px 20px;
-        font-size: 1em;
-        border-radius: 3px;
-        border: 1px solid #888;
-        background: #fff;
-        cursor: pointer;
-        }
-        .note {
-        font-size: 0.9em;
-        color: #333;
-        margin-left: 5px;
-        }
-    </style>
-    </head>
-    <body>
-    <div class="container">
-        <h1>Student Registration Form</h1>
+</head>
+<body>
+
+    <center>
         <form>
-        <div class="row">
-            <label>Roll no. :</label>
-            <input type="text" name="rollno">
-        </div>
-        <div class="row">
-            <label>Student name :</label>
-            <input type="text" name="fname" placeholder="First Name" class="inline" style="width:110px;">
-            -
-            <input type="text" name="lname" placeholder="Last Name" class="inline" style="width:110px;">
-        </div>
-        <div class="row">
-            <label>Father's name :</label>
-            <input type="text" name="father">
-        </div>
-        <div class="row">
-            <label>Date of birth :</label>
-            <input type="text" name="day" placeholder="Day" maxlength="2" class="dob-input">
-            -
-            <input type="text" name="month" placeholder="Month" maxlength="2" class="dob-input">
-            -
-            <input type="text" name="year" placeholder="Year" maxlength="4" class="dob-input">
-            <span class="note">(DD-MM-YYYY)</span>
-        </div>
-        <div class="row">
-            <label>Mobile no. :</label>
-            <input type="text" value="+91" readonly class="mobile-prefix" name="prefix">
-            -
-            <input type="text" name="mobile" maxlength="10" class="mobile-main">
-        </div>
-        <div class="row">
-            <label>Email id :</label>
-            <input type="email" name="email">
-        </div>
-        <div class="row">
-            <label>Password :</label>
-            <input type="password" name="password">
-        </div>
-        <div class="row">
-            <label>Gender :</label>
-            <input type="radio" name="gender" value="male" class="inline"> Male
-            <input type="radio" name="gender" value="female" class="inline"> Female
-        </div>
-        <div class="row">
-            <label>Department :</label>
-            <input type="checkbox" name="dept" value="CSE" class="dept-checkbox"> CSE
-            <input type="checkbox" name="dept" value="IT" class="dept-checkbox"> IT
-            <input type="checkbox" name="dept" value="ECE" class="dept-checkbox"> ECE
-            <input type="checkbox" name="dept" value="Civil" class="dept-checkbox"> Civil
-            <input type="checkbox" name="dept" value="Mech" class="dept-checkbox"> Mech
-        </div>
-        <div class="row">
-            <label>Course :</label>
-            <select name="course">
-            <option>---------------------- Select Current Course's ----------------------</option>
-            <option>B.Tech</option>
-            <option>M.Tech</option>
-            <option>BCA</option>
-            <option>MCA</option>
-            <option>BBA</option>
-            <option>MBA</option>
-            </select>
-        </div>
-        <div class="row">
-            <label>Student photo :</label>
-            <input type="file" name="photo">
-        </div>
-        <div class="row">
-            <label>City :</label>
-            <input type="text" name="city">
-        </div>
-        <div class="row">
-            <label>Address :</label>
-            <textarea name="address"></textarea>
-        </div>
-        <div class="center-btn">
-            <input type="submit" value="Register">
-        </div>
+            <table bgcolor="#ffe4e1" cellpadding="10" width="600">
+                
+                <tr>
+                    <td colspan="2" align="center">
+                        <h1>Student Registration Form</h1>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><b>Roll no. :</b></td>
+                    <td><input type="text" size="50"></td>
+                </tr>
+
+                <tr>
+                    <td><b>Student name :</b></td>
+                    <td>
+                        <input type="text" placeholder="First Name" size="20"> - 
+                        <input type="text" placeholder="Last Name" size="20">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><b>Father's name :</b></td>
+                    <td><input type="text" size="50"></td>
+                </tr>
+
+                <tr>
+                    <td><b>Date of birth :</b></td>
+                    <td>
+                        <input type="text" placeholder="Day" size="5"> - 
+                        <input type="text" placeholder="Month" size="5"> - 
+                        <input type="text" placeholder="Year" size="8">
+                        <i>(DD-MM-YYYY)</i>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><b>Mobile no. :</b></td>
+                    <td>
+                        <input type="text" value="+91" size="3"> - 
+                        <input type="text" size="30">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><b>Email id :</b></td>
+                    <td><input type="email" size="50"></td>
+                </tr>
+
+                <tr>
+                    <td><b>Password :</b></td>
+                    <td><input type="password" size="50"></td>
+                </tr>
+
+                <tr>
+                    <td><b>Gender :</b></td>
+                    <td>
+                        <input type="radio" name="gender" value="male"> Male
+                        <input type="radio" name="gender" value="female"> Female
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><b>Department :</b></td>
+                    <td>
+                        <input type="checkbox" name="dept" value="cse"> CSE
+                        <input type="checkbox" name="dept" value="it"> IT
+                        <input type="checkbox" name="dept" value="ece"> ECE
+                        <input type="checkbox" name="dept" value="civil"> Civil
+                        <input type="checkbox" name="dept" value="mech"> Mech
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><b>Course :</b></td>
+                    <td>
+                        <select>
+                            <option>---------------- Select Current Course's ----------------</option>
+                            <option>B.Tech</option>
+                            <option>M.Tech</option>
+                            <option>BCA</option>
+                            <option>MCA</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><b>Student photo :</b></td>
+                    <td>
+                        <input type="file">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><b>City :</b></td>
+                    <td><input type="text" size="50"></td>
+                </tr>
+
+                <tr>
+                    <td><b>Address :</b></td>
+                    <td>
+                        <textarea rows="5" cols="50"></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" align="center">
+                        <br>
+                        <button type="submit">Register</button>
+                        <br><br>
+                    </td>
+                </tr>
+
+            </table>
         </form>
-    </div>
-    </body>
-    </html>
+    </center>
+
+</body>
+</html>
