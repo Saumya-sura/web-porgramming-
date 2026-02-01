@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Demonstration</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        h1 {
+            color: red;
+            text-align: center;
+        }
+
+        p {
+            color: gray;
+            line-height: 1.8;
+        }
+
+        ul {
+            list-style-type: square;
+        }
+
+        nav {
+            background-color: #333;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        nav a.active {
+            background-color: orange;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <a href="#" class="active">Home</a>
+    <a href="#">Gallery</a>
+    <a href="#">Table</a>
+    <a href="#">Contact</a>
+</nav>
+
+<h1>CSS Styling Example</h1>
+
+<p>
+    Cascading Style Sheets are used to style and layout web pages.
+    They allow separation of content and presentation.
+</p>
+
+<p>
+    CSS provides multiple ways to apply styles such as inline,
+    internal, and external style sheets.
+</p>
+
+<ul>
+    <li>Inline CSS</li>
+    <li>Internal CSS</li>
+    <li>External CSS</li>
+</ul>
+
+<h2>Image Gallery</h2>
+
+<img src="img1.jpg"
+     style="width:200px; border:4px solid red; border-radius:15px;"
+     class="img">
+
+<img src="img2.jpg"
+     style="width:250px; border:4px dashed green; border-radius:20px;"
+     class="img">
+
+<img src="img3.jpg"
+     style="width:180px; border:4px dotted blue; border-radius:25px;"
+     class="img">
+
+<h2>Student Table</h2>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Course</th>
+        <th>Grade</th>
+    </tr>
+    <tr>
+        <td>Alice</td>
+        <td>AI</td>
+        <td>A</td>
+    </tr>
+    <tr>
+        <td style="background-color: yellow;">Bob</td>
+        <td>ML</td>
+        <td>B</td>
+    </tr>
+    <tr>
+        <td>Charlie</td>
+        <td>DS</td>
+        <td>A</td>
+    </tr>
+</table>
+
+</body>
+</html>
+
+table {
+    border-collapse: collapse;
+    width: 60%;
+    margin: 20px auto;
+}
+
+table, th, td {
+    border: 2px solid black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.img {
+    transition: 0.3s;
+    margin: 10px;
+}
+
+.img:hover {
+    transform: scale(1.2);
+    opacity: 0.6;
+}

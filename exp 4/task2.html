@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Artificial Intelligence</title>
+<style>
+body {
+    margin: 0;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background-color: #f3f0ff;
+}
+header {
+    background-color: #4f378b;
+    padding: 18px 0 12px 0;
+    box-shadow: 0 2px 8px rgba(79,55,139,0.08);
+}
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+}
+nav a {
+    color: #f3e8ff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+}
+nav a:hover {
+    color: #a78bfa;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.hero {
+    background-image: linear-gradient(to right, #7c3aed, #a78bfa);
+    color: #fff;
+    text-align: center;
+    padding: 48px 20px 36px 20px;
+    border-radius: 0 0 24px 24px;
+    box-shadow: 0 4px 24px rgba(124,58,237,0.10);
+}
+.hero h1 {
+    font-size: 44px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 8px #4f378b;
+    margin-bottom: 10px;
+}
+.hero p {
+    font-size: 22px;
+    word-spacing: 4px;
+    margin-top: 0;
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 28px;
+    padding: 40px 32px 10px 32px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.card {
+    background-color: #fff;
+    border: 2.5px solid #a78bfa;
+    border-radius: 18px;
+    padding: 28px 22px 20px 22px;
+    text-align: justify;
+    box-shadow: 0 2px 12px rgba(167,139,250,0.07);
+}
+.card h2 {
+    color: #7c3aed;
+    text-decoration: underline;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+.card p {
+    font-size: 16px;
+    line-height: 1.7;
+    text-indent: 24px;
+    margin: 0 0 8px 0;
+}
+.highlight {
+    color: #f59e42;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.card ul {
+    list-style-type: disc;
+    padding-left: 24px;
+    margin: 0;
+}
+.card ul li {
+    margin: 8px 0;
+    font-size: 15px;
+}
+.gallery {
+    text-align: center;
+    padding: 24px 0 32px 0;
+}
+.gallery img {
+    width: 240px;
+    height: 150px;
+    margin: 12px;
+    border: 3px solid #a78bfa;
+    padding: 6px;
+    background-color: #ede9fe;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(167,139,250,0.10);
+}
+footer {
+    background-color: #4f378b;
+    color: #fff;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 15px;
+    border-radius: 0 0 12px 12px;
+    margin-top: 24px;
+}
+</style>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">AI Basics</a>
+        <a href="#">Applications</a>
+        <a href="#">Resources</a>
+    </nav>
+</header>
+<div class="hero">
+    <h1>Artificial Intelligence</h1>
+    <p>Machines that learn, reason, and decide</p>
+</div>
+<div class="cards">
+    <div class="card">
+        <h2>Introduction</h2>
+        <p>
+            Artificial Intelligence enables machines to simulate human intelligence and perform complex tasks efficiently.
+        </p>
+    </div>
+    <div class="card">
+        <h2>Core Areas</h2>
+        <p>
+            <span class="highlight">Machine Learning</span> learns from data.<br>
+            <span class="highlight">Natural Language Processing</span> understands language.<br>
+            <span class="highlight">Computer Vision</span> interprets images.
+        </p>
+    </div>
+    <div class="card">
+        <h2>Applications</h2>
+        <ul>
+            <li>Healthcare systems</li>
+            <li>Self-driving cars</li>
+            <li>Virtual assistants</li>
+            <li>Fraud detection</li>
+        </ul>
+    </div>
+</div>
+<div class="gallery">
+    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="AI Illustration 1">
+    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="AI Illustration 2">
+    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=400&q=80" alt="AI Illustration 3">
+</div>
+</body>
+<footer>
+    &copy; 2026 Artificial Intelligence Overview. All rights reserved.
+</footer>
+</html>
