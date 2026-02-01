@@ -1,142 +1,213 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="utf-8">
     <title>FOSSIL | Luxury Watches</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            background: linear-gradient(120deg, #0b0f0c 0%, #2f6f55 100%);
+            color: #e6e6e6;
+            font-family: 'Roboto', Arial, sans-serif;
+            min-height: 100vh;
+        }
+        .marquee {
+            background: #0f3d2e;
+            color: #d4af37;
+            font-size: 1.2em;
+            padding: 10px 0;
+            text-align: center;
+            letter-spacing: 2px;
+            font-family: 'Montserrat', Georgia, serif;
+            animation: scroll-left 18s linear infinite;
+            white-space: nowrap;
+            overflow: hidden;
+            position: relative;
+        }
+        @keyframes scroll-left {
+            0% { left: 100vw; }
+            100% { left: -100vw; }
+        }
+        .brand-header {
+            text-align: center;
+            margin-top: 32px;
+        }
+        .brand-header h1 {
+            font-family: 'Montserrat', Georgia, serif;
+            font-size: 3.5em;
+            color: #d4af37;
+            margin: 0 0 8px 0;
+            letter-spacing: 4px;
+            text-shadow: 2px 2px 16px #d4af3744;
+        }
+        .brand-header p {
+            color: #9fd3c7;
+            font-size: 1.3em;
+            margin: 0 0 18px 0;
+            font-weight: 500;
+        }
+        .intro {
+            text-align: center;
+            margin: 24px auto 0 auto;
+            max-width: 700px;
+            font-size: 1.15em;
+            background: rgba(47,111,85,0.13);
+            border-radius: 14px;
+            padding: 18px 24px 10px 24px;
+            box-shadow: 0 2px 12px #2f6f5533;
+        }
+        .section-title {
+            text-align: center;
+            font-family: 'Montserrat', Georgia, serif;
+            color: #d4af37;
+            font-size: 2.2em;
+            margin: 38px 0 18px 0;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 8px #d4af3744;
+        }
+        .watch-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 32px;
+            margin: 0 auto 32px auto;
+            max-width: 1100px;
+        }
+        .watch-card {
+            background: linear-gradient(120deg, #0f3d2e 60%, #2f6f55 100%);
+            border-radius: 18px;
+            box-shadow: 0 2px 16px #d4af3733;
+            padding: 28px 24px 18px 24px;
+            text-align: center;
+            min-width: 260px;
+            max-width: 320px;
+            border: 2.5px solid #d4af37;
+            transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+        }
+        .watch-card:hover {
+            transform: translateY(-8px) scale(1.04);
+            box-shadow: 0 8px 32px #d4af3744;
+            border-color: #9fd3c7;
+        }
+        .watch-card img {
+            width: 220px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 3px solid #9fd3c7;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 8px #2f6f5533;
+        }
+        .watch-card a {
+            color: #d4af37;
+            font-size: 1.18em;
+            font-family: 'Montserrat', Georgia, serif;
+            text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: color 0.2s;
+        }
+        .watch-card a:hover {
+            color: #9fd3c7;
+            text-decoration: underline;
+        }
+        .watch-card .desc {
+            color: #cfe9e3;
+            font-size: 1.05em;
+            margin-top: 6px;
+        }
+        .legacy, .why-fossil {
+            max-width: 800px;
+            margin: 0 auto 32px auto;
+            background: rgba(15,61,46,0.13);
+            border-radius: 14px;
+            padding: 18px 28px 10px 28px;
+            box-shadow: 0 2px 12px #2f6f5533;
+            font-size: 1.13em;
+        }
+        .why-fossil ul {
+            list-style: disc inside;
+            color: #d4af37;
+            font-size: 1.08em;
+            margin: 0 0 0 18px;
+            padding: 0;
+        }
+        .why-fossil ul li {
+            margin: 10px 0;
+            color: #e6e6e6;
+        }
+        .footer {
+            text-align: center;
+            color: #9fd3c7;
+            font-size: 1.1em;
+            margin: 48px 0 0 0;
+            padding-bottom: 18px;
+        }
+        @media (max-width: 900px) {
+            .watch-gallery { flex-direction: column; gap: 18px; }
+            .watch-card { min-width: 0; max-width: 100%; }
+        }
+    </style>
 </head>
+<body>
+    <div class="marquee">✦ FOSSIL ✦ Timeless Luxury ✦ Crafted with Precision ✦ Royal Timepieces ✦</div>
+    <div class="brand-header">
+        <h1>FOSSIL</h1>
+        <p>Timeless Watches | Royal Design | Modern Craftsmanship</p>
+    </div>
+    <div class="intro">
+        <b>Fossil</b> is a globally renowned watch brand that merges <i>heritage-inspired aesthetics</i> with <u>modern technology</u>. Each timepiece reflects sophistication, durability, and timeless luxury.
+    </div>
 
-<body bgcolor="#0b0f0c" text="#e6e6e6">
+    <div class="section-title">Featured Timepieces</div>
+    <div class="watch-gallery">
+        <div class="watch-card">
+            <img src="img/fossil1.jfif" alt="Grant Chronograph">
+            <a href="grant.html">Grant Chronograph</a>
+            <div class="desc">Classic Roman Dial<br>₹14,995</div>
+        </div>
+        <div class="watch-card">
+            <img src="img/fossil2.jfif" alt="Gen 6 Smartwatch">
+            <a href="gen6.html">Gen 6 Smartwatch</a>
+            <div class="desc">Smart Luxury<br>₹23,995</div>
+        </div>
+        <div class="watch-card">
+            <img src="img/fossil3.jfif" alt="Minimalist Watch">
+            <a href="minimalist.html">Minimalist Watch</a>
+            <div class="desc">Elegant Simplicity<br>₹9,995</div>
+        </div>
+    </div>
 
-<!-- TOP MARQUEE -->
-<marquee bgcolor="#0f3d2e" scrollamount="6">
-    <font size="4" color="#d4af37">
-        ✦ FOSSIL ✦ Timeless Luxury ✦ Crafted with Precision ✦ Royal Timepieces ✦
-    </font>
-</marquee>
-
-<!-- BRAND HEADER -->
-<h1 align="center">
-    <font face="Georgia" size="7" color="#d4af37">FOSSIL</font>
-</h1>
-
-<p align="center">
-    <font size="4" color="#9fd3c7">
-        Timeless Watches | Royal Design | Modern Craftsmanship
-    </font>
-</p>
-
-<hr width="85%" color="#d4af37">
-
-<!-- INTRO -->
-<div align="center">
-    <p>
-        <font size="4">
-            <b>Fossil</b> is a globally renowned watch brand that merges
-            <i>heritage-inspired aesthetics</i> with <u>modern technology</u>.
-            Each timepiece reflects sophistication, durability, and timeless luxury.
-        </font>
-    </p>
-</div>
-
-<hr width="70%" color="#2f6f55">
-
-<!-- FEATURED WATCHES -->
-<h2 align="center">
-    <font size="6" color="#d4af37">Featured Timepieces</font>
-</h2>
-
-<table align="center" cellpadding="30">
-<tr align="center">
-
-    <td bgcolor="#0f3d2e">
-        <img src="img/fossil1.jfif" width="220" height="180" border="3"><br><br>
-        <a href="grant.html">
-            <font size="4" color="#d4af37"><b>Grant Chronograph</b></font>
-        </a><br>
-        <font size="3" color="#cfe9e3">Classic Roman Dial<br>₹14,995</font>
-    </td>
-
-    <td bgcolor="#0f3d2e">
-        <img src="img/fossil2.jfif" width="220" height="180" border="3"><br><br>
-        <a href="gen6.html">
-            <font size="4" color="#d4af37"><b>Gen 6 Smartwatch</b></font>
-        </a><br>
-        <font size="3" color="#cfe9e3">Smart Luxury<br>₹23,995</font>
-    </td>
-
-    <td bgcolor="#0f3d2e">
-        <img src="img/fossil3.jfif" width="220" height="180" border="3"><br><br>
-        <a href="minimalist.html">
-            <font size="4" color="#d4af37"><b>Minimalist Watch</b></font>
-        </a><br>
-        <font size="3" color="#cfe9e3">Elegant Simplicity<br>₹9,995</font>
-    </td>
-
-</tr>
-</table>
-
-<hr width="70%" color="#2f6f55">
-
-<!-- HISTORY SECTION -->
-<h2 align="center">
-    <font size="6" color="#d4af37">The Legacy of Fossil</font>
-</h2>
-
-<div align="center">
-    <font size="4">
+    <div class="section-title">The Legacy of Fossil</div>
+    <div class="legacy">
         <p>
-            Fossil was founded in <b>1984</b> with a vision to create watches that
-            combined <i>classic American vintage design</i> with modern innovation.
-            From the very beginning, Fossil stood out by offering premium-looking
-            watches at accessible prices.
+            Fossil was founded in <b>1984</b> with a vision to create watches that combined <i>classic American vintage design</i> with modern innovation. From the very beginning, Fossil stood out by offering premium-looking watches at accessible prices.
         </p>
-
         <p>
-            During the early years, Fossil became popular for reviving
-            <b>retro-inspired aesthetics</b>, especially Roman numerals, leather
-            straps, and chronograph dials. These designs quickly gained recognition
-            worldwide and helped Fossil establish itself as a luxury lifestyle brand.
+            During the early years, Fossil became popular for reviving <b>retro-inspired aesthetics</b>, especially Roman numerals, leather straps, and chronograph dials. These designs quickly gained recognition worldwide and helped Fossil establish itself as a luxury lifestyle brand.
         </p>
-
         <p>
-            As technology evolved, Fossil adapted without losing its identity.
-            The brand successfully entered the smart wearable market while maintaining
-            its commitment to elegance and craftsmanship. Fossil smartwatches reflect
-            a perfect balance between <u>technology and timeless style</u>.
+            As technology evolved, Fossil adapted without losing its identity. The brand successfully entered the smart wearable market while maintaining its commitment to elegance and craftsmanship. Fossil smartwatches reflect a perfect balance between <u>technology and timeless style</u>.
         </p>
-
         <p>
-            Today, Fossil is known not just for watches but for representing
-            <b>confidence, individuality, and sophistication</b>. Every Fossil
-            timepiece carries a story of innovation, precision, and enduring quality,
-            making it a trusted companion for generations.
+            Today, Fossil is known not just for watches but for representing <b>confidence, individuality, and sophistication</b>. Every Fossil timepiece carries a story of innovation, precision, and enduring quality, making it a trusted companion for generations.
         </p>
-    </font>
-</div>
+    </div>
 
-<hr width="70%" color="#2f6f55">
+    <div class="section-title">Why Choose Fossil?</div>
+    <div class="why-fossil">
+        <ul>
+            <li>Heritage-inspired royal designs</li>
+            <li>High-quality materials and precision engineering</li>
+            <li>Perfect blend of classic and modern style</li>
+            <li>Trusted global brand with timeless appeal</li>
+        </ul>
+    </div>
 
-<!-- WHY FOSSIL -->
-<h2 align="center">
-    <font color="#d4af37">Why Choose Fossil?</font>
-</h2>
-
-<div align="center">
-<ul>
-    <li>Heritage-inspired royal designs</li>
-    <li>High-quality materials and precision engineering</li>
-    <li>Perfect blend of classic and modern style</li>
-    <li>Trusted global brand with timeless appeal</li>
-</ul>
-</div>
-
-<hr width="85%" color="#d4af37">
-
-<!-- FOOTER -->
-<p align="center">
-    <font size="3" color="#9fd3c7">
+    <div class="footer">
         © 2026 Fossil Group | Crafted for Time
-    </font>
-</p>
-
+    </div>
 </body>
 </html>
