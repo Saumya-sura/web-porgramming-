@@ -4,28 +4,23 @@
     <title>CSS Demonstration</title>
 
     <link rel="stylesheet" href="style.css">
-
     <style>
         h1 {
             color: red;
             text-align: center;
         }
-
         p {
             color: gray;
             line-height: 1.8;
         }
-
         ul {
             list-style-type: square;
         }
-
         nav {
             background-color: #333;
             text-align: center;
             padding: 10px;
         }
-
         nav a {
             color: white;
             text-decoration: none;
@@ -33,14 +28,49 @@
             display: inline-block;
             font-weight: bold;
         }
-
         nav a:hover {
             background-color: #555;
         }
-
         nav a.active {
             background-color: orange;
             color: black;
+        }
+        /* External CSS for table and images */
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            margin: 24px auto;
+        }
+        table, th, td {
+            border: 2px solid #222;
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+            font-size: 16px;
+        }
+        tr:nth-child(even) {
+            background-color: #f3f4f6;
+        }
+        tr:nth-child(odd) {
+            background-color: #fff;
+        }
+        .gallery-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 20px;
+        }
+        .img {
+            transition: 0.3s;
+            margin: 12px;
+            border-radius: 30px;
+            display: inline-block;
+        }
+        .img:hover {
+            transform: scale(1.18);
+            opacity: 0.5;
         }
     </style>
 </head>
@@ -48,10 +78,10 @@
 <body>
 
 <nav>
-    <a href="#" class="active">Home</a>
-    <a href="#">Gallery</a>
-    <a href="#">Table</a>
-    <a href="#">Contact</a>
+    <a href="#" class="active">Overview</a>
+    <a href="#">Features</a>
+    <a href="#">Examples</a>
+    <a href="#">Support</a>
 </nav>
 
 <h1>CSS Styling Example</h1>
@@ -73,76 +103,50 @@
 </ul>
 
 <h2>Image Gallery</h2>
+<div class="gallery-row">
+    <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80"
+        style="width:210px; border:5px solid #e11d48; border-radius:30px;"
+        class="img">
+    <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?auto=format&fit=crop&w=400&q=80"
+        style="width:260px; border:5px dashed #2563eb; border-radius:40px;"
+        class="img">
+    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+        style="width:190px; border:5px dotted #059669; border-radius:50px;"
+        class="img">
+</div>
 
-<img src="img1.jpg"
-     style="width:200px; border:4px solid red; border-radius:15px;"
-     class="img">
-
-<img src="img2.jpg"
-     style="width:250px; border:4px dashed green; border-radius:20px;"
-     class="img">
-
-<img src="img3.jpg"
-     style="width:180px; border:4px dotted blue; border-radius:25px;"
-     class="img">
 
 <h2>Student Table</h2>
 
 <table>
     <tr>
+        <th>Roll No</th>
         <th>Name</th>
-        <th>Course</th>
-        <th>Grade</th>
+        <th>Score</th>
     </tr>
     <tr>
-        <td>Alice</td>
-        <td>AI</td>
-        <td>A</td>
+        <td>101</td>
+        <td>Priya</td>
+        <td>89</td>
     </tr>
     <tr>
-        <td style="background-color: yellow;">Bob</td>
-        <td>ML</td>
-        <td>B</td>
+        <td>102</td>
+        <td style="background-color: yellow;">Rahul</td>
+        <td>92</td>
     </tr>
     <tr>
-        <td>Charlie</td>
-        <td>DS</td>
-        <td>A</td>
+        <td>103</td>
+        <td>Fatima</td>
+        <td>85</td>
     </tr>
-</table>
+    <tr>
+        <td>104</td>
+        <td>Jin</td>
+        <td>95</td>
 
-</body>
-</html>
 
-table {
-    border-collapse: collapse;
-    width: 60%;
-    margin: 20px auto;
-}
 
-table, th, td {
-    border: 2px solid black;
-}
+        </table>
 
-th, td {
-    padding: 10px;
-    text-align: center;
-}
-
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-tr:nth-child(odd) {
-    background-color: #ffffff;
-}
-
-.img {
-    transition: 0.3s;
-    margin: 10px;
-}
-
-.img:hover {
-    transform: scale(1.2);
-    opacity: 0.6;
-}
+    </body>
+    </html>
