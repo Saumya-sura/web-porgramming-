@@ -1,79 +1,103 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Space Exploration</title>
+<title>World Cuisines</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <style>
 body {
     margin: 0;
-    font-family: "Trebuchet MS", Arial, sans-serif;
-    background-color: #f3f0ff;
+    font-family: 'Roboto', Arial, sans-serif;
+    background: linear-gradient(120deg, #e3f2fd 0%, #3949ab 100%);
+    color: #222;
+    min-height: 100vh;
 }
 header {
-    background-color: #1a237e;
-    padding: 18px 0 12px 0;
-    box-shadow: 0 2px 8px rgba(26,35,126,0.08);
+    background: linear-gradient(90deg, #3949ab 60%, #90caf9 100%);
+    color: #fff;
+    padding: 24px 0 16px 0;
+    text-align: center;
+    box-shadow: 0 4px 24px rgba(57,73,171,0.10);
+    border-radius: 0 0 24px 24px;
 }
 nav {
     display: flex;
     justify-content: center;
     gap: 48px;
+    margin-top: 8px;
 }
 nav a {
     color: #e3f2fd;
     text-decoration: none;
     font-size: 20px;
+    font-family: 'Montserrat', Arial, sans-serif;
     font-weight: bold;
     letter-spacing: 1px;
     transition: color 0.2s;
+    padding: 6px 18px;
+    border-radius: 8px;
 }
 nav a:hover {
-    color: #90caf9;
+    color: #3949ab;
+    background: #e3f2fd;
     text-decoration: underline;
     cursor: pointer;
 }
 .hero {
-    background-image: linear-gradient(to right, #3949ab, #90caf9);
     color: #fff;
     text-align: center;
     padding: 48px 20px 36px 20px;
     border-radius: 0 0 24px 24px;
     box-shadow: 0 4px 24px rgba(57,73,171,0.10);
+    background: none;
 }
 .hero h1 {
-    font-size: 44px;
+    font-size: 3.2em;
+    font-family: 'Montserrat', Arial, sans-serif;
     text-transform: uppercase;
     text-shadow: 2px 2px 8px #1a237e;
     margin-bottom: 10px;
+    letter-spacing: 2px;
 }
 .hero p {
-    font-size: 22px;
+    font-size: 1.5em;
     word-spacing: 4px;
     margin-top: 0;
+    opacity: 0.95;
 }
 .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    gap: 28px;
-    padding: 40px 32px 10px 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
     max-width: 1100px;
-    margin: 0 auto;
+    margin: 36px auto 0 auto;
+    padding: 0 18px;
+    justify-content: center;
 }
 .card {
-    background-color: #fff;
+    background: #fff;
     border: 2.5px solid #90caf9;
     border-radius: 18px;
     padding: 28px 22px 20px 22px;
     text-align: justify;
     box-shadow: 0 2px 12px rgba(144,202,249,0.07);
+    min-width: 260px;
+    max-width: 340px;
+    flex: 1 1 260px;
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+.card:hover {
+    box-shadow: 0 8px 32px #3949ab44;
+    border-color: #3949ab;
 }
 .card h2 {
     color: #3949ab;
     text-decoration: underline;
     margin-top: 0;
     margin-bottom: 12px;
+    font-family: 'Montserrat', Arial, sans-serif;
 }
 .card p {
-    font-size: 16px;
+    font-size: 1.08em;
     line-height: 1.7;
     text-indent: 24px;
     margin: 0 0 8px 0;
@@ -94,26 +118,39 @@ nav a:hover {
 }
 .gallery {
     text-align: center;
-    padding: 24px 0 32px 0;
+    padding: 32px 0 40px 0;
+    background: none;
 }
 .gallery img {
-    width: 240px;
-    height: 150px;
-    margin: 12px;
-    border: 3px solid #90caf9;
-    padding: 6px;
+    width: 260px;
+    height: 160px;
+    margin: 18px;
+    border: 4px solid #90caf9;
+    padding: 8px;
     background-color: #e3f2fd;
-    border-radius: 10px;
+    border-radius: 16px;
     box-shadow: 0 2px 8px rgba(144,202,249,0.10);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.gallery img:hover {
+    transform: scale(1.07) rotate(-2deg);
+    box-shadow: 0 8px 32px #3949ab44;
+    border-color: #3949ab;
 }
 footer {
     background-color: #1a237e;
     color: #fff;
     text-align: center;
-    padding: 12px 0;
-    font-size: 15px;
-    border-radius: 0 0 12px 12px;
-    margin-top: 24px;
+    padding: 16px 0;
+    font-size: 1.1em;
+    border-radius: 0 0 18px 18px;
+    margin-top: 36px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    letter-spacing: 1px;
+}
+@media (max-width: 900px) {
+    .cards { flex-direction: column; gap: 18px; }
+    .gallery img { width: 98vw; max-width: 340px; height: auto; }
 }
 </style>
 </head>
@@ -121,44 +158,45 @@ footer {
 <header>
     <nav>
         <a href="#">Home</a>
-        <a href="#">Missions</a>
-        <a href="#">Discoveries</a>
+        <a href="#">Cuisines</a>
+        <a href="#">Recipes</a>
         <a href="#">Gallery</a>
     </nav>
 </header>
 <div class="hero">
-    <h1>Space Exploration</h1>
-    <p>Journey beyond our world</p>
+    <h1>World Cuisines</h1>
+    <p>Explore Flavors from Every Continent</p>
 </div>
 <div class="cards">
     <div class="card">
         <h2>Introduction</h2>
         <p>
-            Space exploration is the ongoing discovery and study of celestial structures in outer space by means of continuously evolving space technology.
+            The world of food is a vibrant tapestry of flavors, traditions, and cultures. Each cuisine tells a story, blending local ingredients and centuries-old techniques.
         </p>
     </div>
     <div class="card">
-        <h2>Famous Missions</h2>
+        <h2>Popular Cuisines</h2>
         <p>
-            <span class="highlight">Apollo 11</span> landed the first humans on the Moon.<br>
-            <span class="highlight">Voyager 1</span> is the farthest human-made object from Earth.<br>
-            <span class="highlight">Mars Rover Perseverance</span> explores the surface of Mars.
+            <span class="highlight">Italian</span> is famous for pasta and pizza.<br>
+            <span class="highlight">Japanese</span> delights with sushi and ramen.<br>
+            <span class="highlight">Mexican</span> brings bold spices and tacos.<br>
+            <span class="highlight">Indian</span> offers aromatic curries and breads.
         </p>
     </div>
     <div class="card">
-        <h2>Recent Discoveries</h2>
+        <h2>Fun Food Facts</h2>
         <ul>
-            <li>Water on Mars</li>
-            <li>Black hole imaging</li>
-            <li>Exoplanet detection</li>
-            <li>Organic molecules on comets</li>
+            <li>There are over 350 types of pasta in Italy.</li>
+            <li>Sushi means "sour rice" in Japanese.</li>
+            <li>Chocolate originated in Central America.</li>
+            <li>India is the largest producer of spices in the world.</li>
         </ul>
     </div>
 </div>
 <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=400&q=80" alt="Space Shuttle">
-    <img src="https://images.unsplash.com/photo-1447433819943-74a20887a81e?auto=format&fit=crop&w=400&q=80" alt="Astronaut">
-    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Mars Surface">
+    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Italian Pasta">
+    <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" alt="Japanese Sushi">
+    <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80" alt="Mexican Tacos">
 </div>
 </body>
 <footer>

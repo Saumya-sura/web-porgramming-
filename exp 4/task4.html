@@ -3,57 +3,65 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Profile Card</title>
+	<title>Chef Card</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 	<style>
 		body {
-			background: #f8f8e7;
-			font-family: Arial, sans-serif;
+			background: linear-gradient(120deg, #fffbe7 0%, #f7c873 100%);
+			font-family: 'Roboto', Arial, sans-serif;
+			margin: 0;
 		}
-		.profile-card {
+		.chef-card {
 			width: 420px;
-			margin: 48px auto;
-			background: #fafae3;
-			border: 3px solid #222;
-			border-radius: 12px;
-			text-align: center;
-			padding: 40px 32px 32px 32px;
-			box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+			margin: 64px auto;
+			background: #fff; 
+			border-radius: 20px; 
+			box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2); 
+			padding: 40px 30px; 
+			text-align: center; 
+			max-width: 350px; 
+			width: 100%; 
+			transition: box-shadow 0.3s; 
 		}
-		.profile-card img {
-			width: 220px;
-			height: 220px;
+		.chef-card:hover {
+			box-shadow: 0 16px 48px #f7c87388;
+			border-color: #ff9800;
+		}
+		.chef-card img {
+			width: 180px;
+			height: 180px;
 			object-fit: cover;
 			border-radius: 50%;
-			border: 6px solid #222;
+			border: 6px solid #ff9800;
 			margin-bottom: 24px;
-			background: #111;
+			background: #fffbe7;
 			display: block;
 			margin-left: auto;
 			margin-right: auto;
+			box-shadow: 0 2px 12px #f7c87344;
 		}
-		.profile-card h2 {
-			margin: 0 0 16px 0;
-			font-size: 2.4em;
-			font-weight: bold;
-			color: #222;
-			letter-spacing: 0.5px;
-		}
-		.profile-card p {
-			color: #444;
-			font-size: 1.18em;
-			margin: 0;
-			line-height: 1.6;
-			padding: 0 8px;
-		}
+		   .chef-card h2 {
+			   margin: 0 0 16px 0;
+			   font-size: 2.2em;
+			   font-weight: bold;
+			   color: #ff9800;
+			   letter-spacing: 1px;
+			   font-family: 'Montserrat', Arial, sans-serif;
+		   }
+		   .chef-card p {
+			   color: #444;
+			   font-size: 1.13em;
+			   margin: 0;
+			   line-height: 1.7;
+			   padding: 0 8px;
+		   }
 	</style>
 </head>
 <body>
-	<div class="profile-card">
-		<img src="https://randomuser.me/api/portraits/men/85.jpg" alt="Profile Photo">
-		<h2>Daniel Kim</h2>
-		<p>
-			Avid traveler and tech enthusiast. Loves capturing moments, coding creative projects, and sharing stories from around the world.
-		</p>
-	</div>
+	   <div class="chef-card">
+		   <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80" alt="Random Person">
+		   <h2>Jordan Lee</h2>
+		   <p>Enthusiastic about technology, travel, and photography. Loves meeting new people and exploring new cultures.</p>
+	   </div>
 </body>
 </html>
