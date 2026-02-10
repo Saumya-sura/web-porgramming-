@@ -14,8 +14,14 @@
     function showPattern() {
         const n = parseInt(document.getElementById('linesInput').value);
         let out = '';
-        for(let i=1; i<=n; i++) out += '*'.repeat(i) + '\n';
-        for(let i=n-1; i>=1; i--) out += '*'.repeat(i) + '\n';
+        // Top part
+        for(let i=1; i<=n; i++) {
+            out += ' '.repeat(n-i) + '* '.repeat(i).trim() + '\n';
+        }
+        // Bottom part
+        for(let i=n-1; i>=1; i--) {
+            out += ' '.repeat(n-i) + '* '.repeat(i).trim() + '\n';
+        }
         document.getElementById('pattern').textContent = out;
     }
     </script>

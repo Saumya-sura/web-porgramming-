@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task 9 and 10 - JavaScript Patterns and Seasons</title>
+	<style>
+		body { font-family: Arial, sans-serif; margin: 20px; }
+		.pattern-box { display: flex; gap: 40px; margin-top: 20px; }
+		pre { background: #f4f4f4; padding: 10px; border-radius: 5px; }
+		.pattern-col { min-width: 120px; }
+	</style>
+</head>
+<body>
+	<h2>Task 9: Season by Month (Switch Statement)</h2>
+	<button onclick="showSeason()">Show Current Season</button>
+	<div id="seasonResult" style="margin-top:10px;font-weight:bold;"></div>
+	<hr>
+	<h2>Task 10: Pattern Printing (Nested Loops)</h2>
+	<label>Enter number of lines: <input type="number" id="linesInput" min="1" max="10" value="5"></label>
+	<button onclick="showPatterns()">Show Patterns</button>
+	<div class="pattern-box">
+		<div class="pattern-col">
+			<b>Pattern 1</b>
+			<pre id="pattern1"></pre>
+		</div>
+		<div class="pattern-col">
+			<b>Pattern 2</b>
+			<pre id="pattern2"></pre>
+		</div>
+		<div class="pattern-col">
+			<b>Pattern 3</b>
+			<pre id="pattern3"></pre>
+		</div>
+		<div class="pattern-col">
+			<b>Pattern 4</b>
+			<pre id="pattern4"></pre>
+		</div>
+	</div>
+
+	<script>
+	// Task 9: Season by Month
+	function showSeason() {
+		const now = new Date();
+		const month = now.getMonth(); // 0=Jan, 1=Feb, ..., 11=Dec
+		let season = '';
+		switch(month) {
+			case 11: // Dec
+			case 0:  // Jan
+			case 1:  // Feb
+				season = 'Winter';
+				break;
+			case 2:  // Mar
+			case 3:  // Apr
+			case 4:  // May
+				season = 'Summer';
+				break;
+			case 5:  // June
+			case 6:  // July
+			case 7:  // Aug
+			case 8:  // Sep
+				season = 'Monsoon';
+				break;
+			case 9:  // Oct
+			case 10: // Nov
+				season = 'Autumn';
+				break;
+			default:
+				season = 'Unknown';
+		}
+		document.getElementById('seasonResult').textContent = `Current month: ${now.toLocaleString('default', {month: 'long'})} → Season: ${season}`;
+	}
+
+	// Task 10: Pattern Printing
+	function showPatterns() {
+		const n = parseInt(document.getElementById('linesInput').value);
+		document.getElementById('pattern1').textContent = pattern1(n);
+		document.getElementById('pattern2').textContent = pattern2(n);
+		document.getElementById('pattern3').textContent = pattern3(n);
+		document.getElementById('pattern4').textContent = pattern4(n);
+	}
+
+	// Pattern 1: Diamond of stars
+	function pattern1(n) {
+		let out = '';
+		// Top
+		for(let i=1; i<=n; i++) {
+			out += '*'.repeat(i) + '\n';
+		}
+		// Bottom
+		for(let i=n-1; i>=1; i--) {
+			out += '*'.repeat(i) + '\n';
+		}
+		return out;
+	}
+
+	// Pattern 2: Palindromic numbers
+	function pattern2(n) {
+		let out = '';
+		for(let i=1; i<=n; i++) {
+			// Left numbers
+			for(let j=1; j<=i; j++) out += j;
+			// Right numbers
+			for(let j=i-1; j>=1; j--) out += j;
+			out += '\n';
+		}
+		return out;
+	}
+
+	// Pattern 3: Letters in triangle
+	function pattern3(n) {
+		let out = '';
+		let ch = 65; // 'A'
+		for(let i=1; i<=n; i++) {
+			for(let j=1; j<=i; j++) {
+				out += String.fromCharCode(ch++) + ' ';
+			}
+			out = out.trim() + '\n';
+		}
+		return out;
+	}
+
+	// Pattern 4: Numbers in reverse triangle
+	function pattern4(n) {
+		let out = '';
+		for(let i=n; i>=1; i--) {
+			for(let j=1; j<=i; j++) out += j;
+			out += '\n';
+		}
+		return out;
+	}
+	</script>
+</body>
+</html>
