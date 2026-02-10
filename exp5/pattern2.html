@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pattern 2 - Palindromic Numbers</title>
+    <style>body { font-family: Arial; margin: 20px; }</style>
+</head>
+<body>
+    <h2>Pattern 2: Palindromic Numbers</h2>
+    <label>Enter number of lines: <input type="number" id="linesInput" min="1" max="10" value="5"></label>
+    <button onclick="showPattern()">Show Pattern</button>
+    <pre id="pattern"></pre>
+    <script>
+    function showPattern() {
+        const n = parseInt(document.getElementById('linesInput').value);
+        let out = '';
+        for(let i=1; i<=n; i++) {
+            for(let j=1; j<=i; j++) out += j;
+            for(let j=i-1; j>=1; j--) out += j;
+            out += '\n';
+        }
+        document.getElementById('pattern').textContent = out;
+    }
+    </script>
+</body>
+</html>

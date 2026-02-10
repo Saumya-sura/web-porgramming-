@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 10 - All Patterns</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .pattern-box { display: flex; gap: 40px; margin-top: 20px; }
+        pre { background: #f4f4f4; padding: 10px; border-radius: 5px; }
+        .pattern-col { min-width: 120px; }
+    </style>
+</head>
+<body>
+    <h2>Task 10: Pattern Printing (Nested Loops)</h2>
+    <label>Enter number of lines: <input type="number" id="linesInput" min="1" max="10" value="5"></label>
+    <button onclick="showPatterns()">Show Patterns</button>
+    <div class="pattern-box">
+        <div class="pattern-col">
+            <b>Pattern 1</b>
+            <pre id="pattern1"></pre>
+        </div>
+        <div class="pattern-col">
+            <b>Pattern 2</b>
+            <pre id="pattern2"></pre>
+        </div>
+        <div class="pattern-col">
+            <b>Pattern 3</b>
+            <pre id="pattern3"></pre>
+        </div>
+        <div class="pattern-col">
+            <b>Pattern 4</b>
+            <pre id="pattern4"></pre>
+        </div>
+    </div>
+    <script>
+    function showPatterns() {
+        const n = parseInt(document.getElementById('linesInput').value);
+        document.getElementById('pattern1').textContent = pattern1(n);
+        document.getElementById('pattern2').textContent = pattern2(n);
+        document.getElementById('pattern3').textContent = pattern3(n);
+        document.getElementById('pattern4').textContent = pattern4(n);
+    }
+    function pattern1(n) {
+        let out = '';
+        for(let i=1; i<=n; i++) out += '*'.repeat(i) + '\n';
+        for(let i=n-1; i>=1; i--) out += '*'.repeat(i) + '\n';
+        return out;
+    }
+    function pattern2(n) {
+        let out = '';
+        for(let i=1; i<=n; i++) {
+            for(let j=1; j<=i; j++) out += j;
+            for(let j=i-1; j>=1; j--) out += j;
+            out += '\n';
+        }
+        return out;
+    }
+    function pattern3(n) {
+        let out = '';
+        let ch = 65;
+        for(let i=1; i<=n; i++) {
+            for(let j=1; j<=i; j++) out += String.fromCharCode(ch++) + ' ';
+            out = out.trim() + '\n';
+        }
+        return out;
+    }
+    function pattern4(n) {
+        let out = '';
+        for(let i=n; i>=1; i--) {
+            for(let j=1; j<=i; j++) out += j;
+            out += '\n';
+        }
+        return out;
+    }
+    </script>
+</body>
+</html>
